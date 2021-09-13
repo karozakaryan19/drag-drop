@@ -1,0 +1,20 @@
+@import '../../styles/vars.scss';
+
+.wrapper_textarea{
+    padding: 10px;
+    height: 80px;
+    background: $add-item-bg;
+    border: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: $white;
+    width: 90%;
+
+    &::placeholder {
+        font-size: 16px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

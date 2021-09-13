@@ -1,0 +1,52 @@
+@import '../../styles/vars.scss';
+
+.add_button{
+    @extend %flex-align;
+    background: $list-content-bg;
+
+    &__first{
+        @extend %flex-align;
+        padding: 6px 10px;
+        font-size: 14px;
+        background: none;
+        border: none;
+        color: $add-item-bg;
+        width: 100%;
+        
+        &:hover{
+            background: $button-hover;
+        }
+        
+        &_text{
+            margin-left: 8px;
+        }
+    }
+
+    &__second{
+        @extend %flex-center;
+        margin: 10px 0 10px 10px;
+        max-width: 165px;
+        width: 100%;
+        padding: 6px 0;
+        background: $add-item-bg;
+        color: $white;
+        border: none;
+    }
+
+    &__icon{
+        @extend %flex-center;
+        border: none;
+        background: none;
+        height: 42px;
+        width: 42px;
+
+        &_child{
+            height: 16px;
+            width: 16px;
+    
+            g{
+                fill: $add-item-bg;
+            }
+        }
+    }
+}

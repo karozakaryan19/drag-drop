@@ -1,0 +1,56 @@
+@import '../../styles/vars.scss';
+
+.wrapper__card{
+    position: relative;
+    background: $item-bg;
+    height: 100px;
+    padding: 16px 10px;
+    color: $add-item-bg;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: $ease-out;
+    user-select: none;
+
+    &__close{
+        @extend %flex-center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 30px;
+        width: 30px;
+
+        &__icon{
+            height: 12px;
+            width: 12px;
+
+            g{
+                fill: $add-item-bg;
+            }
+        }
+    }
+
+    &_id{
+        margin-bottom: 10px;
+
+        b{
+            color: $white;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+    }
+
+    &_text{
+        line-height: 24px;
+        height: 50px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        word-break: break-all;
+      
+        &::-webkit-scrollbar {
+          display: none;
+        }
+    
+    }
+}

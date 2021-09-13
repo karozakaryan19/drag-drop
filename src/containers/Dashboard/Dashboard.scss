@@ -1,0 +1,47 @@
+@import '../../styles/vars.scss';
+
+.is-moving {
+  transform: scale(1.1);
+  background: rgba($item-bg, 0.8);
+}
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.9;
+	list-style-type: none;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  height: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.logout{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-image: linear-gradient(to bottom right, $add-item-bg, $button-hover);
+  color: $white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: none;
+
+  &:hover{
+    background-image: linear-gradient($button-hover, $add-item-bg);
+  }
+}

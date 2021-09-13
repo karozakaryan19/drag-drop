@@ -1,0 +1,63 @@
+@import '../../styles/vars.scss';
+
+.wrapper{
+    &_label{
+        font-size: 18px;
+        color: $white;
+    }
+
+   &_input{
+    @include input(transparent);
+
+    &__content{
+        background: none;
+        border: none;
+        min-height: 20px;
+        -webkit-appearance: none;
+          
+        &::-webkit-search-cancel-button {
+            display: none;
+        }
+    }
+
+    &_onfocus{
+        @include input($secondary-1);
+        
+        &__content{
+            background: none;
+            border: none;
+            min-height: 20px;
+            -webkit-appearance: none;
+              
+            &::-webkit-search-cancel-button {
+                display: none;
+            }
+        }
+    }
+   }
+
+   &__error_message{
+       max-width: 350px;
+       width: 100%;
+       height: 14px;
+       font-size: 14px;
+       margin-bottom: 4px;
+       color: $danger-2;
+       word-wrap: break-word;
+   }
+
+   &__icon {
+        @extend %flex-center;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+
+
+        &_child{
+            height: 16px;
+            width: 16px;
+        }
+    }
+}
